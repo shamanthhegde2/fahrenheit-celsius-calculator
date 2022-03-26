@@ -1,0 +1,12 @@
+<h3>Fahrenheit/Celcius Converter</h3>
+<form (ngSubmit)="getResult()">
+  <label for="input_value">Enter the degree u want to convert</label>
+  <input type="number" name="input_value" id="input_value" [(ngModel)]="input_value"><br>
+  <input type="radio" name="degree" id="degree" value="C" [(ngModel)]="radio_value" />Convert to Centigrade
+  <input type="radio" name="degree" id="degree" value="F" [(ngModel)]="radio_value">Covert to Fahrenheit
+  <br>
+  <input type="submit" value="Submit" id="Submit Button">
+</form>
+<div [ngClass]="{show:dontShow}">
+  {{answer}}°{{radio_value}}
+</div>
